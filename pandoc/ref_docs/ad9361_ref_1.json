@@ -1,0 +1,152 @@
+{
+  "pandoc-api-version": [1, 23, 1],
+  "meta": {},
+  "blocks": [
+    {
+      "t": "Header",
+      "c": [
+        6,
+        [
+          "ad9361_high_performance_highly_integrated_rf_agile_transceiver_linux_device_driver",
+          [],
+          []
+        ],
+        [
+          { "t": "Str", "c": "AD9361" },
+          { "t": "Space" },
+          { "t": "Str", "c": "high" },
+          { "t": "Space" },
+          { "t": "Str", "c": "performance," },
+          { "t": "Space" },
+          { "t": "Str", "c": "highly" },
+          { "t": "Space" },
+          { "t": "Str", "c": "integrated" },
+          { "t": "Space" },
+          { "t": "Str", "c": "RF" },
+          { "t": "Space" },
+          { "t": "Str", "c": "Agile" },
+          { "t": "Space" },
+          { "t": "Str", "c": "Transceiver™" },
+          { "t": "Space" },
+          { "t": "Str", "c": "Linux" },
+          { "t": "Space" },
+          { "t": "Str", "c": "device" },
+          { "t": "Space" },
+          { "t": "Str", "c": "driver" }
+        ]
+      ]
+    },
+    {
+      "t": "Para",
+      "c": [
+        { "t": "Str", "c": "Some" },
+        { "t": "Space" },
+        { "t": "Str", "c": "code" },
+        { "t": "Space" },
+        { "t": "Str", "c": "below" }
+      ]
+    },
+    {
+      "t": "Para",
+      "c": [
+        { "t": "RawInline", "c": ["html", "<code>"] },
+        { "t": "SoftBreak" },
+        { "t": "Str", "c": "Linux" },
+        { "t": "Space" },
+        { "t": "Str", "c": "Kernel" },
+        { "t": "Space" },
+        { "t": "Str", "c": "Configuration" }
+      ]
+    },
+    {
+      "t": "Para",
+      "c": [
+        { "t": "Code", "c": [["", [], []], "   Device Drivers  --->"] },
+        { "t": "LineBreak" },
+        {
+          "t": "Code",
+          "c": [["", [], []], "   <*>     Industrial I/O support --->"]
+        },
+        { "t": "LineBreak" },
+        {
+          "t": "Code",
+          "c": [["", [], []], "       --- Industrial I/O support"]
+        },
+        { "t": "LineBreak" },
+        {
+          "t": "Code",
+          "c": [
+            ["", [], []],
+            "       -*-   Enable ring buffer support within IIO"
+          ]
+        },
+        { "t": "LineBreak" },
+        {
+          "t": "Code",
+          "c": [
+            ["", [], []],
+            "       -*-     Industrial I/O lock free software ring"
+          ]
+        },
+        { "t": "LineBreak" },
+        {
+          "t": "Code",
+          "c": [["", [], []], "       -*-   Enable triggered sampling support"]
+        }
+      ]
+    },
+    {
+      "t": "Para",
+      "c": [
+        {
+          "t": "Code",
+          "c": [
+            ["", [], []],
+            "             *** Analog to digital converters ***"
+          ]
+        },
+        { "t": "LineBreak" },
+        { "t": "Code", "c": [["", [], []], "       [--snip--]"] }
+      ]
+    },
+    {
+      "t": "Para",
+      "c": [
+        {
+          "t": "Code",
+          "c": [
+            ["", [], []],
+            "       <*>   Analog Devices AD9467 AD9643 High-Speed AXI ADC driver"
+          ]
+        }
+      ]
+    },
+    {
+      "t": "Para",
+      "c": [{ "t": "Code", "c": [["", [], []], "       [--snip--]"] }]
+    },
+    { "t": "Para", "c": [{ "t": "RawInline", "c": ["html", "</code>"] }] },
+    {
+      "t": "Para",
+      "c": [
+        { "t": "Str", "c": "Done" },
+        { "t": "Space" },
+        { "t": "Str", "c": "with" },
+        { "t": "Space" },
+        { "t": "Str", "c": "code" }
+      ]
+    },
+    {
+      "t": "Header",
+      "c": [
+        6,
+        ["hardware_configuration", [], []],
+        [
+          { "t": "Str", "c": "Hardware" },
+          { "t": "Space" },
+          { "t": "Str", "c": "configuration" }
+        ]
+      ]
+    }
+  ]
+}

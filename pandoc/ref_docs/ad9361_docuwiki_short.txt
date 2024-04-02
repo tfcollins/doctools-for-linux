@@ -1,0 +1,24 @@
+====== AD9361 high performance, highly integrated RF Agile Transceiver™ Linux device driver ======
+
+The AD9361 is a high performance, highly integrated RF Agile Transceiver™. Its programmability and wideband capability make it ideal for a broad range of transceiver applications. The device combines an RF front end with a flexible mixed-signal baseband section and integrated frequency synthesizers, simplifying design-in by providing a configurable digital interface to a processor.
+
+===== RX Signal Path =====
+
+The AD9361 RX signal path passes downconverted signals (I and Q) to the baseband receiver section.  The baseband RX signal path is composed of two programmable analog low-pass filters, a 12-bit ADC, and four stages of digital decimating filters.  Each of the four decimating filters can be bypassed.  The corner frequency for each low-pass filter is programmable via SPI registers.  Figure below shows a block diagram for the AD9361 RX signal path.  Note that both the I and Q paths are schematically identical to each other. \\
+
+{{ :resources:tools-software:linux-drivers:iio-transceiver:rx_signal_path.png?800 | RX Signal Path}}
+
+The high level in_voltage_sampling_frequency attribute effectively controls the BBPLL frequency the ADC Sample clock and all following decimating filter blocks except the FIR block which is handled upon user configuration.
+This IIO device attribute allows the user to control the Baseband (BB) Sample Rate in Hz granularity in the range from 521KSPS up to 61.44MSPS, also depending on the FIR filter decimation chosen.
+in_voltage_sampling_frequency as well as out_voltage_sampling_frequency are not entirely independent, by default the both need to match unless adi,fdd-rx-rate-2tx-enable is enabled.
+Then RX rate can be twice the TX rate.
+
+<WRAP left tip round box 100%>**NOTE:**\\
+In the minimum ADC rate is 25MSPS.
+Baseband rates below 2.083 MSPS (25MSPS/12) require FIR decimation/interpolation to be set.
+In other words the FIR filter needs to be configured and enabled. 
+The minimum baseband rate with the FIR filter (decimate by 4) enabled is: 25MSPS /(4*12) = 520.83 kSPS.
+
+Some example filters can be found here:[[https://github.com/analogdevicesinc/iio-oscilloscope/tree/master/filters|filters]]
+
+</WRAP>
